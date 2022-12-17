@@ -18,6 +18,7 @@ def read_dataset_and_labels(directory_path):
 
 
 if __name__ == '__main__':
+
     model_name = 'lbp'
 
     training_data, training_labels = read_dataset_and_labels(
@@ -40,8 +41,4 @@ if __name__ == '__main__':
         if (prediction[0] == test_data[i]).any():
             correct += 1
 
-    if model_name == 'lbp':
-        print("LBP: " + str(correct / len(test_data)))
-
-    if model_name == 'pca':
-        print("PCA: " + str(correct / len(test_data)))
+    print("LBP: " + str(correct / len(test_data)))
